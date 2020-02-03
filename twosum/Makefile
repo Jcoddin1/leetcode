@@ -1,7 +1,7 @@
 all:	twosum.cpp
 	g++ -g -Wall -o twosum twosum.cpp
 
-test:	twosum test1.txt
+test:	twosum
 	./twosum
 
 gdb:	twosum

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <vector>
+#include <fstream>
 using namespace std;
 
 // Given an array, show which two indeces add up to the target
@@ -20,7 +21,25 @@ vector<int> twoSum(vector<int>& nums, int target){
 	return answer;
 }
 
+// Need to be able to read input from a file and export output to a file
+
 int main(){
+	// Following Code exports to a file
+	ofstream myfile;
+	myfile.open("example.txt");
+	myfile << "Writing this to a file.\n";
+	myfile.close();
+	// Following Code imports from a file
+	string line;
+	ifstream mefile ("inexample.txt");
+	if (mefile.is_open()){
+		while(getline(mefile,line)){
+			cout << line << '\n';
+		}
+	mefile.close();
+	}
+	else cout << "Unable to open file";
+
 	int tester[] = {1,2,3,4,5,56};
 	vector<int> input;
 	for(int i=0;i<6;i++){
@@ -32,5 +51,5 @@ int main(){
 	printf("%i and %i\n", disp[0], disp[1]);
 	// This lists the indeces,(WHAT WE WANT)
 	// printf("at indeces %i and %i\n",);
-
+	return 0;
 }
