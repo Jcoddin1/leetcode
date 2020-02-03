@@ -11,8 +11,8 @@ vector<int> twoSum(vector<int>& nums, int target){
 	for(int i=0;i!=nums.back();i++){
 		for(int j=0;j<nums.back() && j!=i;j++){
 			if(nums[i]+nums[j]==target){
-				answer.push_back(nums[j]);
-				answer.push_back(nums[i]);
+				answer.push_back(j);
+				answer.push_back(i);
 				break;
 			}
 		}
@@ -28,6 +28,9 @@ int main(){
 	}
 
 	vector<int> disp = twoSum(input, 61);
+	// This lists the values
 	printf("%i and %i\n", disp[0], disp[1]);
-	
+	// This lists the indeces,(WHAT WE WANT)
+	// printf("at indeces %i and %i\n",);
+
 }
