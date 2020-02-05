@@ -19,10 +19,21 @@ vector<int> twoSum(vector<int>& nums, int target){
 		}
 	}	
 	return answer;
+	// Works for Submission on leetcode
 }
 
-// Need to be able to read input from a file and export output to a file
+// Attempt at 2 pass hash table 
+// TODO
+vector<int> htwoSum(vector<int>& nums, int target){
+	vector<int> answer;
+	
+}
+// Attempt at 1 pass hash table
+// TODO
+vector<int> mtwoSum(vector<int>& nums, int target){
+	vector<int> answer;
 
+}
 int main(){
 	// Following Code exports to a file
 	ofstream myfile;
