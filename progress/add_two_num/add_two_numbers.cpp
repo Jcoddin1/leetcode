@@ -1,5 +1,5 @@
 //Initial template from GFG
-#include <iostream>
+#include "add_two_numbers.h"
 using namespace std;
 
 class Node {
@@ -18,6 +18,26 @@ class Node {
         }
 
 };
+ADD_TWO_NUM::Node(){
+    data = 0;
+    next = NULL;
+}
+
+
+
+
+
+ADD_TWO_NUM::Node(int data){
+    this->data = data;
+    this->next = NULL;
+}
+
+
+
+
+
+
+
 
 class Linkedlist{
     Node* head;
