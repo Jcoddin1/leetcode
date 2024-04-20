@@ -5,26 +5,27 @@
 
 # Think automta - should be very easy, just don't mess up syntax
 
+from datetime import datetime
 
 # input string
 s = "0+(1)+((2))+(((3)))"
 
-#solution
+class Solution:
+    def maxDepth(self, s: str) -> int:
+        depth = 0
+        maxdepth = 0
+        for i in range(len(s)):
+            if(s[i]=="("):
+                depth += 1
+                i += 1
+            elif(s[i]==")"):
+                if(maxDepth<depth):
+                    maxDepth = depth
+                depth -= 1
+            else:
+                i += 1
+        return maxDepth
 
-depth = 0
-maxDepth = 0
-for i in range(len(s)):
-    if s[i]=="(":
-        #
-        depth+=1
-        i += 1
-    elif s[i]==")":
-        if(maxDepth<=depth):
-            maxDepth = depth
-        depth -= 1
-    else:
-        i += 1
+def __main__ ():
+    Solution.maxdepth(s)
 
-
-print(s)
-print(maxDepth)
